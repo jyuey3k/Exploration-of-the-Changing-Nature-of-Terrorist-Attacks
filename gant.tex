@@ -1,0 +1,66 @@
+\begin{ganttchart}[
+    canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+    hgrid style/.style={draw=black!5, line width=.75pt},
+    vgrid={*1{draw=black!5, line width=.75pt}},
+    today=10,
+    today rule/.style={
+      draw=black!64,
+      dash pattern=on 3.5pt off 4.5pt,
+      line width=1.5pt
+    },
+    today label font=\small\bfseries,
+    title/.style={draw=none, fill=none},
+    title label font=\bfseries\footnotesize,
+    title label node/.append style={below=7pt},
+    include title in canvas=false,
+    bar label font=\mdseries\small\color{black!70},
+    bar label node/.append style={left=2cm},
+    bar/.append style={draw=none, fill=black!63},
+    bar incomplete/.append style={fill=barblue},
+    bar progress label font=\mdseries\footnotesize\color{black!70},
+    group incomplete/.append style={fill=groupblue},
+    group left shift=0,
+    group right shift=0,
+    group height=.5,
+    group peaks tip position=0,
+    group label node/.append style={left=.6cm},
+    group progress label font=\bfseries\small,
+    link/.style={-latex, line width=1.5pt, linkred},
+    link label font=\scriptsize\bfseries,
+    link label node/.append style={below left=-2pt and 0pt}
+  ]{1}{13}
+  \gantttitle[
+    title label node/.append style={below left=7pt and -3pt}
+  ]{WEEKS:\quad6}{6}
+  \gantttitlelist{7,...,13}{1} \\
+  \ganttgroup[progress=100]{Preliminary Analysis}{6}{9} \\
+  \ganttbar[
+    progress=100,
+    name=WBS1A
+  ]{\textbf{Tableau Exploration} }{6}{9} \\
+  \ganttbar[
+    progress=100,
+    name=WBS1B
+  ]{\textbf{Python Exploration} }{6}{9} \\
+  \ganttbar[
+    progress=100,
+    name=WBS1C
+  ]{\textbf{R Exploration} }{6}{9} \\
+  %\ganttbar[
+   % progress=0,
+    %name=WBS1D
+  %]{\textbf{WBS 1.4} Activity D}{4}{10} \\[grid]
+  \ganttgroup[progress=0]{Data Analysis and Plot Generation Split between group members}{8}{12} \\
+  \ganttbar[progress=80]{\textbf{Casualty Plots}}{8}{11} \\
+  \ganttbar[progress=80]{\textbf{Property Damage Plots}}{8}{11} \\
+  \ganttbar[progress=60]{\textbf{Geovisualisations}}{8}{11} \\
+  \ganttbar[progress=80]{\textbf{Weapons types}}{8}{11} \\
+  \ganttbar[progress=80]{\textbf{Types of Attacks}}{8}{11}\\
+   \ganttbar[progress=50]{\textbf{Casualty compared to others}}{9}{12}\\
+    \ganttbar[progress=50]{\textbf{Property Damage compared to others}}{9}{12}\\
+     \ganttbar[progress=30]{\textbf{Geographical plots compared to others}}{9}{12}\\
+      \ganttbar[progress=50]{\textbf{Weapon types compared to others}}{9}{12}\\
+       \ganttbar[progress=50]{\textbf{Attack types compared to others}}{9}{12}\\
+  \ganttgroup[progress=60]{Report Writing and Analysis of Plots}{7}{12} \\
+  
+\end{ganttchart}
